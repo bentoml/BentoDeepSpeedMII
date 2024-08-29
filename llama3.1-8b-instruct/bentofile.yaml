@@ -10,5 +10,8 @@ python:
   lock_packages: false
 envs:
   - name: HF_TOKEN
+  - name: MKL_THREADING_LAYER
+    value: GNU
 docker:
   python_version: 3.11
+  base_image: pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
